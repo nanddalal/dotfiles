@@ -1,0 +1,15 @@
+# Start login shell so it sources things properly.
+shell -$SHELL
+
+# Special key:
+escape ^Aa
+
+# vim navigation
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+startup_message off
+
+hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"

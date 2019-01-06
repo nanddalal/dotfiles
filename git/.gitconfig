@@ -1,0 +1,26 @@
+[user]
+  name = Nand Dalal
+  email = nndalal@umich.edu
+[github]
+  user = nanddalal
+[alias]
+  st = status
+  co = checkout
+  br = branch
+[push]
+  default = current
+[pull]
+  default = current
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+[color]
+  ui = true
+[color "status"]
+  added = yellow
+  changed = green
+  branch = cyan bold
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
