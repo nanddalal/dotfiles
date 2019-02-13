@@ -35,7 +35,7 @@ endfunction
 command! -bar SetupPython call SetupPython()
 
 " UI
-set cc=80
+set cc=99
 set so=999
 set number
 set ruler
@@ -171,12 +171,12 @@ nnoremap S :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 nnoremap FF :ALEFix<CR>
 nnoremap LL :ALELint<CR>
 let g:ale_fixers = {
-\   'python': ['isort', 'yapf'],
+\   'python': ['black'],
 \   'cpp': ['clang-format'],
 \   'proto': ['clang-format'],
 \}
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': [],
 \   'cpp': [],
 \   'proto': [],
 \}
@@ -196,7 +196,7 @@ nnoremap T :YcmCompleter GoTo<CR>
 let g:ycm_goto_buffer_command = 'vertical-split' " 'new-or-existing-tab'
 
 " python debugging
-au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()  # yapf: disable<Esc>
+au FileType python map <silent> <leader>b o# fmt: off<CR>import ipdb; ipdb.set_trace()# fmt: on<Esc>
 
 " python and cpp completion
 set tag=~/cl_tags
