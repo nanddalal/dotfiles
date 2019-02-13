@@ -63,8 +63,8 @@ install_vim() {
   ./configure \
     --with-features=huge \
     --enable-multibyte \
-    --enable-pythoninterp=yes \
-    --with-python-config-dir=/usr/lib/python2.7/config \
+    --enable-python3interp=yes \
+    --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
     --enable-cscope \
     --prefix=$DOTFILES_ROOT/vim/vim/vim
   make install
@@ -76,7 +76,7 @@ install_vim() {
   ./install --bin
 
   cd $DOTFILES_ROOT/vim/.vim/bundle/YouCompleteMe
-  ./install.py --clang-completer # --gocode-completer
+  python3 install.py --clang-completer # --gocode-completer
 }
 
 
@@ -92,7 +92,7 @@ uninstall_vim() {
 install_all() {
   install_bash
   install_git
-  install_python
+  #install_python
   install_screen
   install_vim
 }
@@ -101,7 +101,7 @@ install_all() {
 uninstall_all() {
   uninstall_bash
   uninstall_git
-  uninstall_python
+  #uninstall_python
   uninstall_screen
   uninstall_vim
 }
