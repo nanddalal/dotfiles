@@ -1,1 +1,2 @@
+alias it from IPython import embed; embed();
 alias qq import os; os._exit(0);
