@@ -188,6 +188,7 @@ let g:ale_set_quickfix = 0
 " fzf related
 set rtp+=$DOTFILES_ROOT/vim/.vim/bundle/fzf
 nnoremap <C-p> :GitFiles<CR>
+nnoremap <C-f> :Files<CR>
 
 " ycm related
 nnoremap D :YcmCompleter GetDoc<CR>
