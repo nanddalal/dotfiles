@@ -176,7 +176,7 @@ let g:ale_fixers = {
 \   'proto': ['clang-format'],
 \}
 let g:ale_linters = {
-\   'python': [],
+\   'python': ['pylint'],
 \   'cpp': [],
 \   'proto': [],
 \}
@@ -195,9 +195,12 @@ nnoremap D :YcmCompleter GetDoc<CR>
 nnoremap K :YcmCompleter GoToReferences<CR>
 nnoremap T :YcmCompleter GoTo<CR>
 let g:ycm_goto_buffer_command = 'vertical-split' " 'new-or-existing-tab'
+let g:qfenter_keymap = {}
+let g:qfenter_keymap.vopen = ['<C-v>']
+let g:qfenter_keymap.topen = ['<C-t>']
 
 " python debugging
-au FileType python map <silent> <leader>b o# fmt: off<CR>import ipdb; ipdb.set_trace()# fmt: on<Esc>
+au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()  # yapf: disable<Esc>
 
 " python and cpp completion
 set tag=~/cl_tags
