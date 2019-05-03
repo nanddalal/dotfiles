@@ -63,7 +63,7 @@ fi
 
 case "$(uname)" in
     Darwin)
-        HOST='nand'
+        HOST='shu'
         alias ll='ls -lahtr '
         ;;
     Linux)
