@@ -169,6 +169,7 @@ nnoremap S :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
 
 " ale related
 nnoremap FF :ALEFix<CR>
+nnoremap SS :%!sqlformat --reindent --keywords upper --identifiers lower -<CR>
 nnoremap LL :ALELint<CR>
 let g:ale_fixers = {
 \   'python': ['black'],
