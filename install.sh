@@ -61,12 +61,24 @@ uninstall_screen() {
 install_vim() {
   cd $DOTFILES_ROOT/vim/vim
   mkdir vim
+
+  PYTHON_CONFIGURE_FLAGS=""
+  if [[ ${PYTHON_VERSION} == "python2.7" ]]; then
+    PYTHON_CONFIGURE_FLAGS+=" --enable-pythoninterp=yes "
+    PYTHON_CONFIGURE_FLAGS+=" --with-python-command=python2.7 "
+  elif [[ ${PYTHON_VERSION} == "python3.5" ]]; then
+    PYTHON_CONFIGURE_FLAGS+=" --enable-python3interp=yes "
+    PYTHON_CONFIGURE_FLAGS+=" --with-python3-command=python3.5 "
+  else
+    echo "Unsupported python version : ${PYTHON_VERSION}"
+    echo "Compiling vim without python support"
+  fi
+
   rm -f src/auto/config.cache
   ./configure \
     --with-features=huge \
     --enable-multibyte \
-    --enable-python3interp=yes \
-    --with-python3-command=python3.5 \
+    $PYTHON_CONFIGURE_FLAGS \
     --enable-cscope \
     --prefix=$DOTFILES_ROOT/vim/vim/vim
   make install
@@ -78,7 +90,7 @@ install_vim() {
   ./install --bin
 
   cd $DOTFILES_ROOT/vim/.vim/bundle/YouCompleteMe
-  python3 install.py --clang-completer # --gocode-completer
+  $PYTHON_VERSION install.py --clang-completer # --gocode-completer
 }
 
 
