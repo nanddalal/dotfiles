@@ -15,5 +15,7 @@ git clone --recursive git@github.com:nanddalal/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles
 
+bash install.sh uninstall_all
+
 bash install.sh install_all
 ```

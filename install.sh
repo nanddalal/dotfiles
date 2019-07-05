@@ -61,11 +61,12 @@ uninstall_screen() {
 install_vim() {
   cd $DOTFILES_ROOT/vim/vim
   mkdir vim
+  rm -f src/auto/config.cache
   ./configure \
     --with-features=huge \
     --enable-multibyte \
     --enable-python3interp=yes \
-    --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
+    --with-python3-command=python3.5 \
     --enable-cscope \
     --prefix=$DOTFILES_ROOT/vim/vim/vim
   make install
