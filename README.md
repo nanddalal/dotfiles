@@ -17,6 +17,7 @@ cd ~/.dotfiles
 
 bash install.sh uninstall_all
 
+# E.g. export PYTHON_VERSION=python3.5
 export PYTHON_VERSION=...
 
 bash install.sh install_all
