@@ -40,6 +40,7 @@ Thumbs.db
 # Icon must ends with two \r.
 Icon
 
+.ipynb_checkpoints
 
 # vim #
 #######

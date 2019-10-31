@@ -35,7 +35,7 @@ endfunction
 command! -bar SetupPython call SetupPython()
 
 " UI
-set cc=99
+set cc=100
 set so=999
 set number
 set ruler
