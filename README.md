@@ -18,6 +18,7 @@ cd ~/.dotfiles
 
 bash install.sh uninstall_all
 
+# set PYTHON_VERSION to some python executable which is not miniconda
 # E.g. export PYTHON_VERSION=python3.5
 export PYTHON_VERSION=...
 
