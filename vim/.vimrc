@@ -10,22 +10,14 @@ set showbreak=↪
 set autoindent
 set nosmartindent
 filetype plugin indent on
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set nosmarttab
 set backspace=indent,eol,start
 set clipboard=unnamed
 let delimitMate_expand_cr = 1
-
-function! SetupGo()
-  setlocal noexpandtab
-  setlocal softtabstop=8
-  setlocal tabstop=8
-  setlocal shiftwidth=8
-endfunction
-command! -bar SetupGo call SetupGo()
 
 function! SetupPython()
   setlocal softtabstop=4
@@ -47,6 +39,7 @@ set ttyfast
 set noshowcmd
 let g:indentLine_char = '¦'
 let g:indentLine_enabled = 0
+nnoremap <Leader>t :IndentLinesToggle<CR>
 
 " Visual
 set visualbell
@@ -96,11 +89,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
-nmap <Leader>[ :TagbarToggle<CR>
-nnoremap <leader>t :IndentLinesToggle<CR>
-
 " NERDTree
 nmap <Leader>] :NERDTreeToggle<CR>
+nmap <Leader>[ :TagbarToggle<CR>
 autocmd FocusGained * call s:UpdateNERDTree()
 
 " NERDTree utility function
@@ -202,7 +193,7 @@ let g:qfenter_keymap.vopen = ['<C-v>']
 let g:qfenter_keymap.topen = ['<C-t>']
 
 " python debugging
-au FileType python map <silent> <leader>b oimport ipdb; ipdb.set_trace()  # yapf: disable<Esc>
+au FileType python map <silent> <Leader>b oimport ipdb; ipdb.set_trace()  # yapf: disable<Esc>
 
 " python and cpp completion
 set tag=~/cl_tags
