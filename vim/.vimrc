@@ -198,3 +198,6 @@ au FileType python map <silent> <Leader>b oimport ipdb; ipdb.set_trace()  # yapf
 " python and cpp completion
 set tag=~/cl_tags
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+
+" latex building
+nnoremap MM :make<CR><CR><CR>
