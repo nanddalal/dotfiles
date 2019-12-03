@@ -167,6 +167,7 @@ let g:ale_fixers = {
 \   'python': ['black'],
 \   'cpp': ['clang-format'],
 \   'proto': ['clang-format'],
+\   'html': ['tidy'],
 \}
 let g:ale_linters = {
 \   'python': ['pylint'],
