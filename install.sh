@@ -4,15 +4,6 @@ set -ex
 export DOTFILES_ROOT=$HOME/.dotfiles
 
 
-update_submodules() {
-  cd $DOTFILES_ROOT
-  git submodule update --init --recursive --remote
-
-  cd vim/.vim/bundle/YouCompleteMe
-  git submodule update --init --recursive
-}
-
-
 install_bash() {
   ln -s $DOTFILES_ROOT/bash/.bashrc $HOME/.bashrc
 }
@@ -39,6 +30,7 @@ install_python() {
   mkdir -p $HOME/.ipython/profile_default
   ln -s $DOTFILES_ROOT/python/ipython_config.py $HOME/.ipython/profile_default/ipython_config.py
   ln -s $DOTFILES_ROOT/python/.pdbrc $HOME/.pdbrc
+  pip3 install black==18.9b0 pylint==2.1.1
 }
 
 
@@ -69,6 +61,9 @@ install_vim() {
   elif [[ ${PYTHON_VERSION} == "python3.5" ]]; then
     PYTHON_CONFIGURE_FLAGS+=" --enable-python3interp=yes "
     PYTHON_CONFIGURE_FLAGS+=" --with-python3-command=python3.5 "
+  elif [[ ${PYTHON_VERSION} == "python3.6" ]]; then
+    PYTHON_CONFIGURE_FLAGS+=" --enable-python3interp=yes "
+    PYTHON_CONFIGURE_FLAGS+=" --with-python3-command=python3.6 "
   else
     echo "Unsupported python version : ${PYTHON_VERSION}"
     echo "Compiling vim without python support"
@@ -100,15 +95,6 @@ uninstall_vim() {
 
   rm -f $HOME/.vimrc
   rm -rf $HOME/.vim
-}
-
-
-install_all() {
-  install_bash
-  install_git
-  install_python
-  install_screen
-  install_vim
 }
 
 
