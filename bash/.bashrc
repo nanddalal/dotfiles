@@ -101,6 +101,7 @@ PROMPT_COMMAND='PS1="(`basename \"$VIRTUAL_ENV\"`) $(make_prompt | join_prompt)$
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 export DOTFILES_ROOT=$HOME/.dotfiles
+export PATH=$DOTFILES_ROOT/bin:$PATH
 export PATH=$DOTFILES_ROOT/vim/vim/vim/bin:$PATH
 export PATH=$DOTFILES_ROOT/vim/.vim/bundle/fzf/bin:$PATH
 export EDITOR=vim
