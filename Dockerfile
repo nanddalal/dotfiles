@@ -25,3 +25,6 @@ RUN bash install.sh uninstall_all
 RUN bash install.sh install_bash
 RUN bash install.sh install_python
 RUN PYTHON_VERSION=python3.6 bash install.sh install_vim
+
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
