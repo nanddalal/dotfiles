@@ -102,16 +102,20 @@ PROMPT_COMMAND='PS1="(`basename \"$VIRTUAL_ENV\"`) $(make_prompt | join_prompt)$
 
 export DOTFILES_ROOT=$HOME/.dotfiles
 export PATH=$DOTFILES_ROOT/bin:$PATH
-export PATH=$DOTFILES_ROOT/vim/vim/vim/bin:$PATH
+export PATH=$DOTFILES_ROOT/bin/squashfs-root/usr/bin:$PATH
 export PATH=$DOTFILES_ROOT/vim/.vim/bundle/fzf/bin:$PATH
-export EDITOR=vim
+if hash nvim 2>/dev/null; then
+  export EDITOR=nvim
+else
+  export EDITOR=vim
+fi
 
 alias gpus="watch -n0.2 nvidia-smi"
 
 alias ff='find . -name '
 
 function __vim_find {
-  vim $(ff $*)
+  $EDITOR $(ff $*)
 }
 alias vimf="__vim_find"
 

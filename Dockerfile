@@ -20,6 +20,12 @@ RUN mkdir /root/.dotfiles
 WORKDIR /root/.dotfiles
 ADD ./ ./
 
+WORKDIR /root/.dotfiles/bin
+RUN curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+RUN chmod u+x nvim.appimage
+RUN ./nvim.appimage --appimage-extract
+
+WORKDIR /root/.dotfiles
 RUN bash install.sh uninstall_all
 
 RUN bash install.sh install_bash

@@ -1,6 +1,3 @@
-[submodule "vim/vim"]
-	path = vim/vim
-	url = git://github.com/vim/vim.git
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
 	url = git://github.com/w0rp/ale.git
@@ -61,3 +58,6 @@
 [submodule "vim/.vim/bundle/QFEnter"]
 	path = vim/.vim/bundle/QFEnter
 	url = git://github.com/yssl/QFEnter
+[submodule "vim/.vim/bundle/vim-polyglot"]
+	path = vim/.vim/bundle/vim-polyglot
+	url = git://github.com/sheerun/vim-polyglot

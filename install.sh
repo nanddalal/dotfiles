@@ -30,7 +30,7 @@ install_python() {
   mkdir -p $HOME/.ipython/profile_default
   ln -s $DOTFILES_ROOT/python/ipython_config.py $HOME/.ipython/profile_default/ipython_config.py
   ln -s $DOTFILES_ROOT/python/.pdbrc $HOME/.pdbrc
-  pip3 install black==18.9b0 pylint==2.1.1
+  pip3 install black==18.9b0 pylint==2.1.1 pynvim==0.4.0
 }
 
 
@@ -51,35 +51,11 @@ uninstall_screen() {
 
 
 install_vim() {
-  cd $DOTFILES_ROOT/vim/vim
-  mkdir vim
-
-  PYTHON_CONFIGURE_FLAGS=""
-  if [[ ${PYTHON_VERSION} == "python2.7" ]]; then
-    PYTHON_CONFIGURE_FLAGS+=" --enable-pythoninterp=yes "
-    PYTHON_CONFIGURE_FLAGS+=" --with-python-command=python2.7 "
-  elif [[ ${PYTHON_VERSION} == "python3.5" ]]; then
-    PYTHON_CONFIGURE_FLAGS+=" --enable-python3interp=yes "
-    PYTHON_CONFIGURE_FLAGS+=" --with-python3-command=python3.5 "
-  elif [[ ${PYTHON_VERSION} == "python3.6" ]]; then
-    PYTHON_CONFIGURE_FLAGS+=" --enable-python3interp=yes "
-    PYTHON_CONFIGURE_FLAGS+=" --with-python3-command=python3.6 "
-  else
-    echo "Unsupported python version : ${PYTHON_VERSION}"
-    echo "Compiling vim without python support"
-  fi
-
-  rm -f src/auto/config.cache
-  ./configure \
-    --with-features=huge \
-    --enable-multibyte \
-    $PYTHON_CONFIGURE_FLAGS \
-    --enable-cscope \
-    --prefix=$DOTFILES_ROOT/vim/vim/vim
-  make install
-
   ln -s $DOTFILES_ROOT/vim/.vimrc $HOME/.vimrc
   ln -s $DOTFILES_ROOT/vim/.vim $HOME/.vim
+
+  mkdir -p $HOME/.config/nvim
+  ln -s $DOTFILES_ROOT/vim/init.vim $HOME/.config/nvim/init.vim
 
   cd $DOTFILES_ROOT/vim/.vim/bundle/fzf
   ./install --bin
@@ -90,11 +66,9 @@ install_vim() {
 
 
 uninstall_vim() {
-  cd $DOTFILES_ROOT/vim/vim
-  rm -rf vim
-
   rm -f $HOME/.vimrc
   rm -rf $HOME/.vim
+  rm -f $HOME/.config/nvim/init.vim
 }
 
 
