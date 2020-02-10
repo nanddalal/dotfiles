@@ -52,6 +52,7 @@ set ignorecase
 set smartcase
 syntax enable
 syntax on
+let g:polyglot_disabled = ['yaml']
 
 " Colors
 let g:solarized_contrast="high"
