@@ -9,5 +9,5 @@ docker run \
     -e PYTHONPATH=${IDE_PYTHONPATH} \
     --detach-keys="ctrl-@" \
     -it \
-    dotfiles \
+    docker.io/nndalal/dotfiles:latest \
     bash
