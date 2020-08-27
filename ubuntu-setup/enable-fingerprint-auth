@@ -1,0 +1,4 @@
+# https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X1_Extreme_(Gen_2)#Fingerprint
+sudo pam-auth-update
+fwupdmgr get-devices | grep -n10 Prom
+fwupdmgr update

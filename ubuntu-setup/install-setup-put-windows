@@ -1,0 +1,3 @@
+# https://askubuntu.com/questions/1048693/how-can-i-snap-a-window-in-a-corner-with-18-04
+sudo apt install gnome-tweaks
+# Then tweak Tweaks > Extensions > Put Windows until you are happy with the keybindings.

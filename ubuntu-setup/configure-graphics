@@ -1,0 +1,8 @@
+# https://medium.com/@remy.hosseinkhan/installing-ubuntu-19-10-on-lenovo-thinkpad-x1-extreme-gen-2-and-p1-gen-2-ba4c9c7c7ed2
+
+# NOTE : use nomodeset to boot into ubuntu without loading the nvidia drivers.
+
+# NOTE : tried upgrading to nvidia driver 440, but this caused problems, and we could not boot,
+#        so had to use nomodeset to boot without loading the nvidia drivers. Then we downgraded
+#        back to 435. Somewhere along the way we also ran the following.
+sudo dpkg-reconfigure gdm3
