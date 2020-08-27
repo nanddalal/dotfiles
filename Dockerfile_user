@@ -1,0 +1,11 @@
+FROM docker.io/nndalal/dotfiles:latest
+
+ARG HOST_USER
+ARG HOST_UID
+RUN useradd -l -m -r -u ${HOST_UID} ${HOST_USER}
+
+RUN chown -R ${HOST_USER} /root
+RUN rm -rf /home/${HOST_USER}
+RUN ln -s /root /home/${HOST_USER}
+
+USER ${HOST_USER}
