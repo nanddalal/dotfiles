@@ -22,5 +22,4 @@
   changed = green
   branch = cyan bold
 [core]
-  editor = vim
   excludesfile = ~/.gitignore
