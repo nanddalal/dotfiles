@@ -104,10 +104,15 @@ export DOTFILES_ROOT=$HOME/.dotfiles
 export PATH=$DOTFILES_ROOT/bin:$PATH
 export PATH=$DOTFILES_ROOT/bin/squashfs-root/usr/bin:$PATH
 export PATH=$DOTFILES_ROOT/vim/.vim/bundle/fzf/bin:$PATH
+
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim
 else
   export EDITOR=vim
+fi
+
+if hash xdg-open 2>/dev/null; then
+  alias open="xdg-open"
 fi
 
 alias gpus="watch -n0.2 nvidia-smi"
