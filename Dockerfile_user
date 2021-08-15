@@ -1,4 +1,4 @@
-FROM docker.io/nndalal/dotfiles:latest
+FROM ghcr.io/nanddalal/dotfiles:main
 
 ARG HOST_USER
 ARG HOST_UID
