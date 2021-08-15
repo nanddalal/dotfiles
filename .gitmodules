@@ -58,6 +58,3 @@
 [submodule "vim/.vim/bundle/vim-polyglot"]
 	path = vim/.vim/bundle/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot
-[submodule "vim/.vim/bundle/YouCompleteMe"]
-	path = vim/.vim/bundle/YouCompleteMe
-	url = git://github.com/ycm-core/YouCompleteMe
