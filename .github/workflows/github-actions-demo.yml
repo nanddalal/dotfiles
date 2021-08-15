@@ -20,5 +20,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - name: Build the base docker image
         run: docker build ${{ github.workspace }} -f Dockerfile
