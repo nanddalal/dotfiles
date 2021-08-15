@@ -1,4 +1,4 @@
-FROM nanddalal/dotfiles/base:latest
+FROM ghcr.io/nanddalal/dotfiles:main
 
 ARG HOST_USER
 ARG HOST_UID
