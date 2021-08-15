@@ -61,7 +61,7 @@ install_vim() {
   ./install --bin
 
   cd $DOTFILES_ROOT/vim/.vim/bundle/YouCompleteMe
-  $PYTHON_VERSION install.py --clang-completer # --gocode-completer
+  $PYTHON_VERSION install.py # --clang-completer # --gocode-completer
 }
 
 

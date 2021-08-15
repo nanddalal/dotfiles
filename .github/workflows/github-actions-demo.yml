@@ -22,6 +22,5 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      - run: git status
       - name: Build the base docker image
         run: docker build ${{ github.workspace }} -f Dockerfile

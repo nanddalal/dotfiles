@@ -5,13 +5,14 @@ set -ex
 DIRECTORY_TO_MOUNT=$1
 IDE_PYTHONPATH=${2:-/code}
 
-IMAGE_NAME=$USER/dotfiles:latest
+IMAGE_NAME=$USER/dotfiles/user:latest
 
 USER_UID=`id -u ${USER}`
 BUILD_OPTS=""
 BUILD_OPTS+=" --build-arg HOST_USER=${USER}"
 BUILD_OPTS+=" --build-arg HOST_UID=${USER_UID}"
 
+docker build $DOTFILES_ROOT -f $DOTFILES_ROOT/Dockerfile -t nanddalal/dotfiles/base:latest
 docker build $DOTFILES_ROOT -f $DOTFILES_ROOT/Dockerfile_user -t ${IMAGE_NAME} ${BUILD_OPTS}
 
 docker run \

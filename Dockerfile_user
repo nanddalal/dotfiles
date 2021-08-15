@@ -1,4 +1,4 @@
-FROM docker.io/nndalal/dotfiles:latest
+FROM nanddalal/dotfiles/base:latest
 
 ARG HOST_USER
 ARG HOST_UID
