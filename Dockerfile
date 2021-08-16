@@ -17,9 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
          sqlformat \
          unzip
 
-RUN mkdir /root/.dotfiles
-WORKDIR /root/.dotfiles
-ADD ./ ./
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get update && apt-get install -y nodejs
+
+RUN mkdir -p /root/.dotfiles/bin
 
 WORKDIR /root/.dotfiles/bin
 RUN curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
@@ -27,11 +28,13 @@ RUN chmod u+x nvim.appimage
 RUN ./nvim.appimage --appimage-extract
 
 WORKDIR /root/.dotfiles
+ADD ./ ./
+
 RUN bash install.sh uninstall_all
 
 RUN bash install.sh install_bash
 RUN bash install.sh install_python
-RUN PYTHON_VERSION=python3.6 bash install.sh install_vim
+RUN bash install.sh install_vim
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8

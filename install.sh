@@ -60,8 +60,11 @@ install_vim() {
   cd $DOTFILES_ROOT/vim/.vim/bundle/fzf
   ./install --bin
 
-  cd $DOTFILES_ROOT/vim/.vim/bundle/YouCompleteMe
-  $PYTHON_VERSION install.py # --clang-completer # --gocode-completer
+  cd $DOTFILES_ROOT/vim/.vim/bundle/coc.nvim
+  npm install -g yarn
+  yarn install
+  npm install esbuild
+  npm run build
 }
 
 
