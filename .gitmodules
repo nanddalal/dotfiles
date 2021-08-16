@@ -19,9 +19,6 @@
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/.vim/bundle/supertab"]
-	path = vim/.vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "vim/.vim/bundle/tagbar"]
 	path = vim/.vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
@@ -58,6 +55,6 @@
 [submodule "vim/.vim/bundle/vim-polyglot"]
 	path = vim/.vim/bundle/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot
-[submodule "vim/.vim/bundle/YouCompleteMe"]
-	path = vim/.vim/bundle/YouCompleteMe
-	url = git://github.com/ycm-core/YouCompleteMe
+[submodule "vim/.vim/bundle/coc.nvim"]
+	path = vim/.vim/bundle/coc.nvim
+	url = git://github.com/neoclide/coc.nvim
