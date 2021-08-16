@@ -12,6 +12,7 @@ BUILD_OPTS=""
 BUILD_OPTS+=" --build-arg HOST_USER=${USER}"
 BUILD_OPTS+=" --build-arg HOST_UID=${USER_UID}"
 
+docker pull ghcr.io/nanddalal/dotfiles:main
 docker build $DOTFILES_ROOT -f $DOTFILES_ROOT/Dockerfile_user -t ${IMAGE_NAME} ${BUILD_OPTS}
 
 docker run \
