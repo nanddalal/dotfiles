@@ -121,8 +121,8 @@ function s:UpdateNERDTree(...)
 endfunction
 
 " NERDCommenter remaps
-nnoremap mm :call NERDComment(0,"toggle")<CR>
-vnoremap mm :call NERDComment(0,"toggle")<CR>
+nnoremap mm :call nerdcommenter#Comment(0,"toggle")<CR>
+vnoremap mm :call nerdcommenter#Comment(0,"toggle")<CR>
 
 " C-# switches to tab
 nmap <Leader>1 1gt
