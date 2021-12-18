@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
          build-essential \
@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
          python3-setuptools \
          silversearcher-ag \
          sqlformat \
+         tidy \
          unzip
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
