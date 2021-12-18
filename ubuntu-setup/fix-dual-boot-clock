@@ -1,0 +1,2 @@
+# https://itsfoss.com/wrong-time-dual-boot/
+timedatectl set-local-rtc 1
