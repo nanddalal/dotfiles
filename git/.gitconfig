@@ -11,6 +11,8 @@
   default = current
 [pull]
   default = current
+[diff]
+  tool = vimdiff
 [difftool]
   prompt = true
 [mergetool]
