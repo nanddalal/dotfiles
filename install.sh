@@ -32,7 +32,7 @@ install_python() {
   ln -s $DOTFILES_ROOT/python/pyproject.toml $HOME/pyproject.toml
   mkdir -p $HOME/.ipython/profile_default
   ln -s $DOTFILES_ROOT/python/ipython_config.py $HOME/.ipython/profile_default/ipython_config.py
-  pip3 install black==18.9b0 pylint==2.1.1 pynvim==0.4.0
+  pip3 install black==22.3.0 pylint==2.13.9 pynvim==0.4.3
 }
 
 
