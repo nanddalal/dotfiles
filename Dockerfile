@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
          tidy \
          unzip
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get update && apt-get install -y nodejs
 
 RUN mkdir -p /root/.dotfiles/bin
