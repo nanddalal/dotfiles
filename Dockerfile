@@ -3,22 +3,22 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-         build-essential \
-         ca-certificates \
-         clang-format \
-         cmake \
-         curl \
-         exuberant-ctags \
-         git \
-         ncdu \
-         ncurses-dev \
-         python3-dev \
-         python3-pip \
-         python3-setuptools \
-         silversearcher-ag \
-         sqlformat \
-         tidy \
-         unzip
+        build-essential \
+        ca-certificates \
+        clang-format \
+        cmake \
+        curl \
+        exuberant-ctags \
+        git \
+        ncdu \
+        ncurses-dev \
+        python3-dev \
+        python3-pip \
+        python3-setuptools \
+        silversearcher-ag \
+        sqlformat \
+        tidy \
+        unzip
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get update && apt-get install -y nodejs
