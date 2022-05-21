@@ -1,60 +1,60 @@
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
-	url = git@github.com/w0rp/ale.git
+	url = git@github.com:w0rp/ale
 [submodule "vim/.vim/bundle/delimitMate"]
 	path = vim/.vim/bundle/delimitMate
-	url = git@github.com/Raimondi/delimitMate.git
+	url = git@github.com:Raimondi/delimitMate
 [submodule "vim/.vim/bundle/fzf"]
 	path = vim/.vim/bundle/fzf
-	url = git@github.com:junegunn/fzf.git
+	url = git@github.com:junegunn/fzf
 [submodule "vim/.vim/bundle/fzf.vim"]
 	path = vim/.vim/bundle/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
+	url = git@github.com:junegunn/fzf.vim
 [submodule "vim/.vim/bundle/indentLine"]
 	path = vim/.vim/bundle/indentLine
-	url = git@github.com/Yggdroot/indentLine.git
+	url = git@github.com:Yggdroot/indentLine
 [submodule "vim/.vim/bundle/nerdcommenter"]
 	path = vim/.vim/bundle/nerdcommenter
-	url = git@github.com/scrooloose/nerdcommenter.git
+	url = git@github.com:scrooloose/nerdcommenter
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
-	url = git@github.com/scrooloose/nerdtree.git
+	url = git@github.com:scrooloose/nerdtree
 [submodule "vim/.vim/bundle/tagbar"]
 	path = vim/.vim/bundle/tagbar
-	url = git@github.com/majutsushi/tagbar.git
+	url = git@github.com:majutsushi/tagbar
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
-	url = git@github.com/bling/vim-airline.git
+	url = git@github.com:bling/vim-airline
 [submodule "vim/.vim/bundle/vim-airline-themes"]
 	path = vim/.vim/bundle/vim-airline-themes
-	url = git@github.com:vim-airline/vim-airline-themes.git
+	url = git@github.com:vim-airline/vim-airline-themes
 [submodule "vim/.vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = git@github.com:altercation/vim-colors-solarized
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
-	url = git@github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
-	url = git@github.com/airblade/vim-gitgutter.git
+	url = git@github.com:airblade/vim-gitgutter
 [submodule "vim/.vim/bundle/vim-go"]
 	path = vim/.vim/bundle/vim-go
-	url = git@github.com/fatih/vim-go.git
+	url = git@github.com:fatih/vim-go
 [submodule "vim/.vim/bundle/vim-rhubarb"]
 	path = vim/.vim/bundle/vim-rhubarb
-	url = git@github.com:tpope/vim-rhubarb.git
+	url = git@github.com:tpope/vim-rhubarb
 [submodule "vim/.vim/bundle/vim-searchindex"]
 	path = vim/.vim/bundle/vim-searchindex
-	url = git@github.com/google/vim-searchindex.git
+	url = git@github.com:google/vim-searchindex
 [submodule "vim/.vim/bundle/vim-virtualenv"]
 	path = vim/.vim/bundle/vim-virtualenv
-	url = git@github.com/jmcantrell/vim-virtualenv.git
+	url = git@github.com:jmcantrell/vim-virtualenv
 [submodule "vim/.vim/bundle/QFEnter"]
 	path = vim/.vim/bundle/QFEnter
-	url = git@github.com/yssl/QFEnter
+	url = git@github.com:yssl/QFEnter
 [submodule "vim/.vim/bundle/vim-polyglot"]
 	path = vim/.vim/bundle/vim-polyglot
-	url = git@github.com/sheerun/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot
 [submodule "vim/.vim/bundle/coc.nvim"]
 	path = vim/.vim/bundle/coc.nvim
-	url = git@github.com/neoclide/coc.nvim
+	url = git@github.com:neoclide/coc.nvim
